@@ -57,7 +57,7 @@ include('template/header.php')
 			</table>
 			
         </div>
-        <div> * GT 1: nam, 2: nữ</div>
+        <div> * GT 1: nam, 0: nữ</div>
         <div class="copyrights ">Duong Hoang Yen</div>
     </div>
 <?php 
