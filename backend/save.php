@@ -13,7 +13,7 @@ if(isset($_POST['save']))
 		$cq=$_POST['cq'];
 
 
-		$sql = "INSERT INTO 1951061139_university(magv, hovaten, ngaysinh,gioitinh, trinhdo, chuyenmon, hocham, hocvi, coquan) VALUES ('$name','$birth','$sex','$trdo','$chm','$hh','$hv','$cq')";
+		$sql = "INSERT INTO giangvien (magv, hovaten, ngaysinh,gioitinh, trinhdo, chuyenmon, hocham, hocvi, coquan) VALUES ('$name','$birth','$sex','$trdo','$chm','$hh','$hv','$cq')";
 	 if (mysqli_query($conn, $sql)) {
 		echo "New record created successfully !";
 	 } else {
@@ -35,7 +35,7 @@ if(count($_POST)>0){
         $hv=$_POST['hv'];
 		$cq=$_POST['cq'];
 
-		$sql = "INSERT INTO 1951061139_university(magv, hovaten, ngaysinh,gioitinh, trinhdo, chuyenmon, hocham, hocvi, coquan) VALUES ('$name','$birth','$sex','$trdo','$chm','$hh','$hv','$cq')";
+		$sql = "INSERT INTO giangvien (magv, hovaten, ngaysinh,gioitinh, trinhdo, chuyenmon, hocham, hocvi, coquan) VALUES ('$name','$birth','$sex','$trdo','$chm','$hh','$hv','$cq')";
 		if (mysqli_query($conn, $sql)) {
 			echo json_encode(array("statusCode"=>200));
 		} 

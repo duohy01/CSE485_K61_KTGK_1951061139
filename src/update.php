@@ -3,7 +3,7 @@ include ('../backend/config.php');
 include('../template/header.php');
 
 if(count($_POST)>0) {
-mysqli_query($conn,"UPDATE blood_donor set bd_name='" . $_POST['name'] . "', bd_age='" . $_POST['age'] . "', bd_bgr='" . $_POST['bgr'] . "' ,bd_sex='" . $_POST['sex'] . "',bd_reg_date='" . $_POST['date'] . "',bd_phno='" . $_POST['phone'] . "' WHERE bd_id='" . $_GET['bd_id'] . "'");
+mysqli_query($conn,"UPDATE giangvien set name='" . $_POST['name'] . "', birth='" . $_POST['birth'] . "', sex='" . $_POST['sex'] . "' ,trdo='" . $_POST['trdo'] . "',chm='" . $_POST['chm'] . "',hh='" . $_POST['hh'] . "',hv='".$_POST['hv']."',cq ='".$_POST['cq']."'WHERE magv='" . $_GET['magv'] . "'");
 Header('location: http://localhost/CSE485_K61_KTGK_1951061139/');
 }else {
 }
@@ -19,7 +19,7 @@ Header('location: http://localhost/CSE485_K61_KTGK_1951061139/');
 <form name="frmUser" method="post" action="">
 <div><?php if(isset($message)) { echo $message; } ?>
 </div>
-<?php $result = mysqli_query($conn,"SELECT * FROM 1951061139_university WHERE magv='" . $_GET['magv'] . "'");
+<?php $result = mysqli_query($conn,"SELECT * FROM giangvien WHERE magv='" . $_GET['magv'] . "'");
 while($row = mysqli_fetch_array($result)) {
 
 ?>

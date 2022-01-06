@@ -31,7 +31,7 @@ include('template/header.php')
 				<tbody>
 				
 				<?php
-				$result = mysqli_query($conn,"SELECT * FROM 1951061139_university");
+				$result = mysqli_query($conn,"SELECT * FROM giangvien");
 					$i=1;
 					while($row = mysqli_fetch_array($result)) {
 				?>
